@@ -5,8 +5,7 @@ vim.g.have_nerd_font = true
 
 vim.opt.number = true -- Make line numbers default
 vim.opt.relativenumber = true -- Enable relative line numbers
-
-vim.opt.mouse = 'a' -- Enable mouse mode, can be useful for resizing splits for example!
+vim.opt.wrap = false
 
 vim.opt.showmode = false -- Don't show the mode, since it's already in the status line
 
@@ -18,6 +17,9 @@ vim.opt.breakindent = true
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+
+vim.opt.smartindent = true
 
 -- Save undo history
 vim.opt.undofile = true
@@ -40,9 +42,6 @@ vim.opt.timeoutlen = 300
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
@@ -51,9 +50,11 @@ vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
+vim.opt.colorcolumn = '100'
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 8
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
