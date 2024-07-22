@@ -16,8 +16,8 @@ vim.keymap.set('x', '<leader>p', '"_dP')
 -- Quickfix list maps
 vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
-vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
-vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
+vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz', { desc = 'Quickfix up' })
+vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz', { desc = 'Quickfix down' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })

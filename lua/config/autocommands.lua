@@ -11,3 +11,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'cpp', 'h' },
+  callback = function()
+    vim.keymap.set('n', '<leader>y', '<cmd>:ClangdSwitchSourceHeader<CR>', { desc = 'Switch header/source' })
+  end,
+})
